@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Personal Website</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body class="page-contain">
+	<header>
+		<div class="profile-container">
+			<img src="assets/me.jpg" alt="Profile" class="profile-image">
+			<div class="name">
+				<h1 id="typing-name">Mavi Angel Viranel O. Caling</h1>
+				<p class="aspiring-dev">CITCS - Web Technology</p>
+			</div>
+		</div>
+	</header>
+	
+	<nav>
+		<a href="#aboutme" class="nav-link">About Me</a>
+		<a href="#hobbies" class="nav-link">Hobbies</a>
+		<a href="#gallery" class="nav-link">Gallery</a>
+	</nav>
+	
+	<section id="aboutme" class="section left">
+        <h2 class="large-text center">About Me</h2>
+        <p class="left">Hi! I'm Mavi Angel Viranel O. Caling, a second-year student majoring in Web Technology with a passion for creating beautiful, functional websites.</p>
+        
+        <p class="left">When I’m not busy coding, you can usually find me hanging out with my dog, singing my heart out, or making covers of my favorite songs. Music is one of my biggest creative outlets, just like web design!</p>
+        
+        <p class="left">I’m also a huge fan of anything cute—whether it’s adorable design elements, cute characters, or fun aesthetics that bring joy to everyday life, I try to incorporate that playful vibe into my projects.</p>
+        
+        <p class="left">Through this website, I share my journey in web development, showcase my projects, and offer a glimpse into the things I love. Feel free to explore my work and get to know me better!</p>
+        
+        <p class="left">Thanks for stopping by!</p>
+      </section>
+	
+      <section id="hobbies" class="section achievements center">
+        <h2 class="large-text">My Hobbies</h2>
+        <ul class="hobbies" style="list-style: none; padding-left: 0;">
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Listening to music</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Making song covers</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Baking</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Cooking</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Play online games</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Watch Movies/Tiktok</li>
+          <li class="hobbies-item" style="text-align: center;"><span style="font-size: 1.2em; margin-right: 0.5em;">▶</span>Take pictures</li>
+        </ul>
+      </section>
+	
+	<section id="gallery" class="section center">
+		<h2 class="large-text">My Gallery</h2>
+		<ul class="gallery-list">
+			<li class="gallery-item">
+				<a href="#">
+					<img src="assets/koko.jpg" alt="gallery 1" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">Kiko</h3>
+						<p class="gallery-description">He is very well behaved.</p>
+					</div>
+				</a>
+			</li>
+			<li class="gallery-item">
+				<a href="#">
+					<img src="assets/bubba.jpg" alt="gallery 2" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">The loml</h3>
+						<p class="gallery-description">A very special person in my life.</p>
+					</div>
+				</a>
+			</li>
+            <li class="gallery-item">
+				<a href="#">
+					<img src="assets/chiro.jpg" alt="gallery 3" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">Chiro</h3>
+						<p class="gallery-description">He loves to bite anything he sees.</p>
+					</div>
+				</a>
+			</li>
+			<li class="gallery-item">
+				<a href="#">
+					<img src="assets/food.jpg" alt="gallery 4" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">Feli Ramen</h3>
+						<p class="gallery-description">Go to ramen resto.</p>
+					</div>
+				</a>
+			</li>
+            <li class="gallery-item">
+				<a href="#">
+					<img src="assets/mean girls.jpg" alt="gallery 5" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">Mean Girls</h3>
+						<p class="gallery-description">Best Trio </p>
+					</div>
+				</a>
+			</li>
+			<li class="gallery-item">
+				<a href="#">
+					<img src="assets/car.jpg" alt="gallery 6" class="gallery-image">
+					<div class="gallery-text">
+						<h3 class="gallery-title">Gracie</h3>
+						<p class="gallery-description">I love sponti roadtrips.</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<p class="center">These are people/things i love <3 </p>
+	</section>
+	
+	<footer class="footer">
+		<p class="center">Copyright 2024 Mavi Angel Viranel O. Caling. All rights reserved.</p>
+	</footer>
+
+    <script>
+        const hobbyItems = document.querySelectorAll('.hobbies-item');
+        window.addEventListener('scroll', function() {
+          hobbyItems.forEach((item, idx) => {
+            const itemPos = item.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (itemPos < windowHeight - 50) {
+              setTimeout(() => {
+                item.style.opacity = 1;
+                item.style.transform = 'translateY(0)';
+              }, idx * 200); 
+            }
+          });
+        });
+      
+        const galleryItems = document.querySelectorAll('.gallery-item');
+      
+        galleryItems.forEach(item => {
+          const img = item.querySelector('.gallery-image');
+          const text = item.querySelector('.gallery-text');
+      
+          item.addEventListener('mouseenter', () => {
+            img.style.filter = 'blur(3px)';
+            text.style.opacity = 1;
+          });
+      
+          item.addEventListener('mouseleave', () => {
+            img.style.filter = 'none';
+            text.style.opacity = 0;
+          });
+        });
+      </script>
+      
